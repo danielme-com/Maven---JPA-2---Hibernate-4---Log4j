@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+/*
+* Copyright (C) 2012 Daniel Medina <http://danielme.com>
+*
+* This file is part of "MavenJpaHibernateLog4jDemo".
+*
+* "MavenJpaHibernateLog4jDemo" is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, version 3.
+*
+* "MavenJpaHibernateLog4jDemo" is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License version 3
+* along with this program. If not, see <http://www.gnu.org/licenses/gpl-3.0.html/>
+*/ 
+-->
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="persistence-unit_demo" transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<class>com.danielme.demo.model.EntityA</class>
+		<class>com.danielme.demo.model.EntityB</class>
+
+		<properties>
+		
+		<!-- =============================== -->
+		<!-- ===========DATABASE============ -->
+		<!-- =============================== -->
+
+		    <!-- MySQL -->
+		    <property name="hibernate.connection.url" value="jdbc:mysql://192.168.0.103:3306/danielme" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+			
+			<!-- MariaDB is fully compatible with MySQL, there isn't a custom dialect-->
+			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://192.168.0.103:3366/danielme" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>-->
+			
+			<!-- PostgreSQL -->
+			<!-- <property name="hibernate.connection.url" value="jdbc:postgresql://192.168.2.102:5432/danielme" />
+			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>-->
+			
+			<!-- SQL SERVER 2012-->
+			<!-- <property name="hibernate.connection.url" value="jdbc:sqlserver://192.168.2.102:1433;databaseName=danielme" />--><!-- http://msdn.microsoft.com/en-us/library/ms378428.aspx -->
+			<!-- <property name="hibernate.connection.driver_class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+				 <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>-->
+			
+			
+			<!-- ORACLE -->
+			<!-- <property name="hibernate.connection.url" value="jdbc:oracle:thin:@192.168.2.102:1521:XE" />
+			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>--> <!-- compatible with 10g and 11g -->			
+			
+		<!-- =============================== -->
+		<!-- =============LOGIN============= -->
+		<!-- =============================== -->
+			<property name="hibernate.connection.username" value="danielme" />
+			<property name="hibernate.connection.password" value="danielmepass" />	
+		
+		<!-- =============================== -->
+		<!-- ===========OTHER PROPS========== -->
+		<!-- =============================== -->				
+			<!-- automatically updates the schema, NOT RECOMENDED IN A PRODUCTION ENVIROMENT. Check user's grant permissions -->
+			<property name="hibernate.hbm2ddl.auto" value="update"/>		
+			<property name="hibernate.show_sql" value="true"/>
+			<!-- Enables autocommit for JDBC pooled connections (it is not recommended) -->
+			<property name="hibernate.connection.autocommit" value="false" />			
+			
+		<!-- =============================== -->
+		<!-- ==============POOL============= -->
+		<!-- =============================== -->
+			<!-- Connection pool with Hibernate-C3P0 integration-->
+			<property name="hibernate.connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider" />
+			<property name="hibernate.c3p0.acquire_increment" value="5"/>
+			<property name="hibernate.c3p0.idle_test_period" value="100"/>
+			<property name="hibernate.c3p0.max_size" value="50"/>
+			<property name="hibernate.c3p0.max_statements" value="0" />
+			<property name="hibernate.c3p0.min_size" value ="5" />
+			<property name="hibernate.c3p0.timeout" value="100" /><!-- for idle connections, in seconds -->
+		
+		</properties>
+
+	</persistence-unit>
+
+</persistence>

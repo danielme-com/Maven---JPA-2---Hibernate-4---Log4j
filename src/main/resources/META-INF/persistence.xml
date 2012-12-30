@@ -53,7 +53,7 @@
 			<!-- SQL SERVER 2012-->
 			<!-- <property name="hibernate.connection.url" value="jdbc:sqlserver://192.168.2.102:1433;databaseName=danielme" />--><!-- http://msdn.microsoft.com/en-us/library/ms378428.aspx -->
 			<!-- <property name="hibernate.connection.driver_class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-				 <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>-->
+				 <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2008Dialect"/>-->
 			
 			
 			<!-- ORACLE -->

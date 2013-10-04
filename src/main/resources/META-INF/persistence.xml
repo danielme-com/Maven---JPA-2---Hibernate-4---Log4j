@@ -38,12 +38,12 @@
 		    <!-- MySQL -->
 		    <property name="hibernate.connection.url" value="jdbc:mysql://192.168.0.103:3306/danielme" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect "/>
 			
 			<!-- MariaDB is fully compatible with MySQL, there isn't a custom dialect-->
 			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://192.168.0.103:3366/danielme" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>-->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect "/>-->
 			
 			<!-- PostgreSQL -->
 			<!-- <property name="hibernate.connection.url" value="jdbc:postgresql://192.168.2.102:5432/danielme" />

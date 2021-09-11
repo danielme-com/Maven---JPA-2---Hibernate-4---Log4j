@@ -18,16 +18,13 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/gpl-3.0.html/>
 */ 
 -->
-<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
 
-	<persistence-unit name="persistence-unit_demo" transaction-type="RESOURCE_LOCAL">
-
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-
-		<class>com.danielme.demo.model.EntityA</class>
-		<class>com.danielme.demo.model.EntityB</class>
+	<persistence-unit name="persistence-unit_demo" transaction-type="RESOURCE_LOCAL">		
 
 		<properties>
 		
@@ -36,7 +33,7 @@
 		<!-- =============================== -->
 
 		    <!-- MySQL -->
-		    <property name="hibernate.connection.url" value="jdbc:mysql://192.168.0.103:3306/danielme" />
+		    <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/danielme" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect "/>
 			
@@ -72,7 +69,7 @@
 		<!-- =============================== -->				
 			<!-- automatically updates the schema, NOT RECOMENDED IN A PRODUCTION ENVIROMENT. Check user's grant permissions -->
 			<property name="hibernate.hbm2ddl.auto" value="update"/>		
-			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.format_sql" value="true"/>
 			<!-- Enables autocommit for JDBC pooled connections (it is not recommended) -->
 			<property name="hibernate.connection.autocommit" value="false" />			
 			

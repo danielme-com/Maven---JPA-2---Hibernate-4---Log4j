@@ -27,7 +27,8 @@ import javax.persistence.Persistence;
 import com.danielme.demo.model.EntityA;
 import com.danielme.demo.model.EntityB;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * 
@@ -37,7 +38,7 @@ import org.apache.log4j.Logger;
 public class Main
 {	
 	
-	private static final Logger logger = Logger.getLogger(Main.class);
+	private static final Logger logger = LogManager.getLogger(Main.class);
 
 	public static void main(String[] args)
 	{

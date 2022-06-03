@@ -32,10 +32,13 @@
 		<!-- ===========DATABASE============ -->
 		<!-- =============================== -->
 
+			<!-- backwards compatibility with Hibernate 5-->
+			<!--<property name="hibernate.id.db_structure_naming_strategy" value="legacy" />-->
+
 		    <!-- MySQL -->
 		    <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/danielme" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect "/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL55Dialect "/>
 			
 			<!-- MariaDB is fully compatible with MySQL, there isn't a custom dialect-->
 			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://192.168.0.103:3366/danielme" />

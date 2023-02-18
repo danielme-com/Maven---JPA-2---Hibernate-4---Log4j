@@ -125,30 +125,33 @@
 		<!-- =========== JDBC DRIVERS ========== -->
 		<!-- =================================== -->
 
-		<!-- Mysql and MariaDB -->
+		<!-- Mysql -->
 		 <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.32</version>
 		</dependency>
+
+		<!-- MariaDB -->
+		<!--<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>3.1.2</version>
+		</dependency>-->
 		
 		<!-- <dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.1-901.jdbc4</version>
 		</dependency> -->
-		
-		<!-- download from http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774 -->
-		<!-- install in a local repository -> mvn install:install-file -Dfile=sqljdbc4.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar -->
+
 		
 		<!-- <dependency>
 		  <groupId>com.microsoft.sqlserver</groupId>
 		  <artifactId>sqljdbc4</artifactId>
 		  <version>4.0</version>
 		</dependency> -->
-		
-		<!-- download ojdbc5.jar from oracle http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-111060-084321.html-->
-		<!-- install in a local repository ->  mvn install:install-file -Dfile=ojdbc5.jar -DgroupId=com.oracle -DartifactId=ojdbc5 -Dversion=11.2.0.3 -Dpackaging=jar -->
+
 		
 		 <!--  <dependency>
 			<groupId>com.oracle</groupId>

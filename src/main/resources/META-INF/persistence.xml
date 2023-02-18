@@ -38,7 +38,7 @@
 		    <!-- MySQL -->
 		    <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/danielme" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL55Dialect "/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect "/>
 			
 			<!-- MariaDB is fully compatible with MySQL, there isn't a custom dialect-->
 			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://192.168.0.103:3366/danielme" />
@@ -70,7 +70,7 @@
 		<!-- =============================== -->
 		<!-- ===========OTHER PROPS========== -->
 		<!-- =============================== -->				
-			<!-- automatically updates the schema, NOT RECOMENDED IN A PRODUCTION ENVIROMENT. Check user's grant permissions -->
+			<!-- automatically updates the schema, NOT RECOMENDED IN A PRODUCTION ENVIRONMENT. Check user's grant permissions -->
 			<property name="hibernate.hbm2ddl.auto" value="update"/>		
 			<property name="hibernate.format_sql" value="true"/>
 			<!-- Enables autocommit for JDBC pooled connections (it is not recommended) -->

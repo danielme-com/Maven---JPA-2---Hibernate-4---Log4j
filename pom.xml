@@ -52,7 +52,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.hibernate.version>5.6.9.Final</project.hibernate.version>
+		<project.hibernate.version>6.0.2.Final</project.hibernate.version>
         <project.build.mainClass>com.danielme.demo.Main</project.build.mainClass>	
 		<maven.compiler.release>11</maven.compiler.release>
         <maven.compiler.plugin>3.8.0</maven.compiler.plugin>
@@ -97,7 +97,7 @@
 	    
 		<dependency>
 			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
+			<artifactId>hibernate-core</artifactId>
 			<version>${project.hibernate.version}</version>
 		</dependency>
 		

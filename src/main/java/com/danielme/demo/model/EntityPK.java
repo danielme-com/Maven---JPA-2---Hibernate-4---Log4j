@@ -1,8 +1,10 @@
 package com.danielme.demo.model;
 
+import jakarta.persistence.Embeddable;
+
 import java.io.Serializable;
 
-import javax.persistence.Embeddable;
+
 
 @Embeddable
 public class EntityPK implements Serializable {

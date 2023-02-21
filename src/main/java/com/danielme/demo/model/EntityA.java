@@ -26,11 +26,7 @@ import java.util.List;
 @Entity
 public class EntityA
 {
-	//by default:
-	// MySQL,MariaDB->id bigint auto_increment 
-	//PostgreSQL->id bigint , and only one sequence called 'hibernate_sequence' for generating PKs
-	//SQLSERVER 2012 id numeric(19,0) identity
-	//ORACLE -> id number(19,0), and only one sequence called 'hibernate_sequence' for generatings PKs
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
